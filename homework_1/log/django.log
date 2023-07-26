@@ -1,0 +1,552 @@
+Watching for file changes with StatReloader
+"GET / HTTP/1.1" 200 235
+D:\Programming\JANGO\Homeworks\HW1\homework_1\homework_1\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\Programming\JANGO\Homeworks\HW1\homework_1\homework_1\settings.py changed, reloading.
+INFO 2023-07-26 17:01:23,998 autoreload 10632 10596Watching for file changes with StatReloader
+INFO 2023-07-26 17:01:33,617 basehttp 10632 11180"GET /about/ HTTP/1.1" 200 224
+INFO 2023-07-26 17:01:35,784 basehttp 10632 11180"GET / HTTP/1.1" 200 235
+INFO 2023-07-26 19:05:42,205 autoreload 3972 14956Watching for file changes with StatReloader
+INFO 2023-07-26 19:05:50,735 basehttp 3972 16000"GET / HTTP/1.1" 200 663
+WARNING 2023-07-26 19:05:50,892 basehttp 3972 16000"GET /static/css/styles.css HTTP/1.1" 404 1801
+WARNING 2023-07-26 19:05:51,269 log 3972 1232Not Found: /favicon.ico
+WARNING 2023-07-26 19:05:51,271 basehttp 3972 1232"GET /favicon.ico HTTP/1.1" 404 2442
+ERROR 2023-07-26 19:06:19,860 log 3972 1232Internal Server Error: /about/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homework_1\myapp\views.py", line 9, in about
+    return render(request, "about_me.html")
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2023-07-26 19:06:19,890 basehttp 3972 1232"GET /about/ HTTP/1.1" 500 163485
+ERROR 2023-07-26 19:07:16,809 log 3972 1232Internal Server Error: /about/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homework_1\myapp\views.py", line 9, in about
+    return render(request, "about_me.html")
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2023-07-26 19:07:16,827 basehttp 3972 1232"GET /about/ HTTP/1.1" 500 163622
+ERROR 2023-07-26 19:08:47,537 log 3972 1232Internal Server Error: /about/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homework_1\myapp\views.py", line 9, in about
+    return render(request, "about_me.html")
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2023-07-26 19:08:47,555 basehttp 3972 1232"GET /about/ HTTP/1.1" 500 163622
+ERROR 2023-07-26 19:09:40,297 log 3972 1232Internal Server Error: /about/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homework_1\myapp\views.py", line 9, in about
+    return render(request, "about_me.html")
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2023-07-26 19:09:40,320 basehttp 3972 1232"GET /about/ HTTP/1.1" 500 163759
+INFO 2023-07-26 19:09:42,667 basehttp 3972 12932"GET / HTTP/1.1" 200 663
+WARNING 2023-07-26 19:09:42,768 basehttp 3972 12932"GET /static/css/styles.css HTTP/1.1" 404 1801
+INFO 2023-07-26 19:10:47,854 autoreload 3220 14288Watching for file changes with StatReloader
+INFO 2023-07-26 19:10:51,986 basehttp 3220 7096"GET / HTTP/1.1" 200 663
+WARNING 2023-07-26 19:10:52,110 basehttp 3220 7096"GET /static/css/styles.css HTTP/1.1" 404 1801
+INFO 2023-07-26 19:11:41,856 autoreload 11716 5220Watching for file changes with StatReloader
+INFO 2023-07-26 19:11:46,764 basehttp 11716 14656"GET / HTTP/1.1" 200 662
+INFO 2023-07-26 19:11:47,185 basehttp 11716 14656"GET /static/css/style.css HTTP/1.1" 200 96
+ERROR 2023-07-26 19:12:38,556 log 11716 14656Internal Server Error: /about/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homework_1\myapp\views.py", line 9, in about
+    return render(request, "about_me.html")
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2023-07-26 19:12:38,576 basehttp 11716 14656"GET /about/ HTTP/1.1" 500 163485
+ERROR 2023-07-26 19:16:16,839 log 11716 14656Internal Server Error: /about/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homework_1\myapp\views.py", line 9, in about
+    return render(request, "about_me.html")
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2023-07-26 19:16:16,862 basehttp 11716 14656"GET /about/ HTTP/1.1" 500 163622
+INFO 2023-07-26 19:21:19,929 basehttp 11716 2960"GET /about/ HTTP/1.1" 200 1286
+INFO 2023-07-26 19:21:20,019 basehttp 11716 2960"GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2023-07-26 19:21:20,083 basehttp 11716 7628"GET /static/images/Student.svg HTTP/1.1" 200 37445
+INFO 2023-07-26 19:21:53,812 basehttp 11716 7628"GET /about/ HTTP/1.1" 200 1286
+INFO 2023-07-26 19:25:45,532 autoreload 8580 1756Watching for file changes with StatReloader
+ERROR 2023-07-26 19:25:48,984 log 8580 288Internal Server Error: /about/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homework_1\myapp\views.py", line 9, in about
+    return render(request, "about_me.html")
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2023-07-26 19:25:49,015 basehttp 8580 288"GET /about/ HTTP/1.1" 500 163622
+ERROR 2023-07-26 19:29:04,221 log 8580 288Internal Server Error: /about/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homework_1\myapp\views.py", line 9, in about
+    return render(request, "about_me.html")
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 4: 'static', expected 'endblock'. Did you forget to register or load this tag?
+ERROR 2023-07-26 19:29:04,262 basehttp 8580 288"GET /about/ HTTP/1.1" 500 165015
+ERROR 2023-07-26 19:30:10,555 log 8580 288Internal Server Error: /about/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homework_1\myapp\views.py", line 9, in about
+    return render(request, "about_me.html")
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 12: 'endblock'. Did you forget to register or load this tag?
+ERROR 2023-07-26 19:30:10,575 basehttp 8580 288"GET /about/ HTTP/1.1" 500 149310
+INFO 2023-07-26 19:30:21,731 basehttp 8580 288"GET /about/ HTTP/1.1" 200 1286
+INFO 2023-07-26 19:30:21,814 basehttp 8580 5088"GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2023-07-26 19:30:22,194 basehttp 8580 288"GET /static/images/student.jpg HTTP/1.1" 200 4776607
+INFO 2023-07-26 19:34:21,145 autoreload 8580 1756D:\Programming\JANGO\Homeworks\HW1\homework_1\homework_1\settings.py changed, reloading.
+INFO 2023-07-26 19:34:22,213 autoreload 7684 2944Watching for file changes with StatReloader
+INFO 2023-07-26 19:36:27,962 autoreload 4660 1256Watching for file changes with StatReloader
+INFO 2023-07-26 19:36:51,531 autoreload 11632 12340Watching for file changes with StatReloader
+INFO 2023-07-26 19:42:21,343 basehttp 11632 10412"GET /about/ HTTP/1.1" 200 1428
+INFO 2023-07-26 19:42:21,432 basehttp 11632 10412"GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2023-07-26 19:42:21,441 basehttp 11632 14944"GET /static/images/student.jpg HTTP/1.1" 304 0
+INFO 2023-07-26 19:43:02,712 autoreload 13388 8672Watching for file changes with StatReloader
+INFO 2023-07-26 19:43:06,418 basehttp 13388 1116"GET /about/ HTTP/1.1" 200 1428
+INFO 2023-07-26 19:43:21,801 basehttp 13388 8976"GET /static/images/student.jpg HTTP/1.1" 200 4776607
+INFO 2023-07-26 19:44:11,143 basehttp 13388 1116"GET /about/ HTTP/1.1" 200 1428
+INFO 2023-07-26 19:44:11,233 basehttp 13388 1116"GET /static/images/student.jpg HTTP/1.1" 304 0
+INFO 2023-07-26 19:44:15,036 basehttp 13388 1116"GET /about/ HTTP/1.1" 200 1428
+INFO 2023-07-26 19:44:29,891 basehttp 13388 1116"GET /about/ HTTP/1.1" 200 1428
+INFO 2023-07-26 19:44:45,429 basehttp 13388 1116"GET / HTTP/1.1" 200 711
+INFO 2023-07-26 19:45:57,620 basehttp 13388 1116"GET / HTTP/1.1" 200 718
+INFO 2023-07-26 19:46:10,883 basehttp 13388 1116"GET / HTTP/1.1" 200 718
+INFO 2023-07-26 19:46:55,391 autoreload 7868 10368Watching for file changes with StatReloader
+INFO 2023-07-26 19:46:58,029 basehttp 7868 10412"GET / HTTP/1.1" 200 718
+INFO 2023-07-26 19:50:32,137 basehttp 7868 10412"GET / HTTP/1.1" 200 718
+INFO 2023-07-26 19:50:32,579 basehttp 7868 10412"GET /static/css/style.css HTTP/1.1" 200 167
+INFO 2023-07-26 19:50:47,576 basehttp 7868 10412"GET / HTTP/1.1" 200 718
+INFO 2023-07-26 19:50:47,656 basehttp 7868 10412"GET /static/css/style.css HTTP/1.1" 200 167
+INFO 2023-07-26 20:02:20,590 basehttp 7868 13656"GET / HTTP/1.1" 200 718
+INFO 2023-07-26 20:02:20,689 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 243
+INFO 2023-07-26 20:03:39,036 basehttp 7868 13656"GET / HTTP/1.1" 200 738
+INFO 2023-07-26 20:03:39,112 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 370
+INFO 2023-07-26 20:03:48,261 basehttp 7868 13656"GET / HTTP/1.1" 200 738
+INFO 2023-07-26 20:03:48,352 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 370
+INFO 2023-07-26 20:04:17,509 basehttp 7868 13656"GET / HTTP/1.1" 200 738
+INFO 2023-07-26 20:04:17,604 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 516
+INFO 2023-07-26 20:04:33,378 basehttp 7868 13656"GET / HTTP/1.1" 200 731
+INFO 2023-07-26 20:04:33,433 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 515
+INFO 2023-07-26 20:05:14,997 basehttp 7868 13656"GET / HTTP/1.1" 200 731
+INFO 2023-07-26 20:05:15,088 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 658
+INFO 2023-07-26 20:05:24,157 basehttp 7868 13656"GET / HTTP/1.1" 200 731
+INFO 2023-07-26 20:05:24,235 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 658
+INFO 2023-07-26 20:05:55,849 basehttp 7868 13656"GET / HTTP/1.1" 200 731
+INFO 2023-07-26 20:05:55,933 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 764
+INFO 2023-07-26 20:06:16,051 basehttp 7868 13656"GET /about/ HTTP/1.1" 200 1428
+INFO 2023-07-26 20:06:16,129 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2023-07-26 20:06:16,142 basehttp 7868 13656"GET /static/images/student.jpg HTTP/1.1" 304 0
+INFO 2023-07-26 20:07:00,875 basehttp 7868 13656"GET /about/ HTTP/1.1" 200 1428
+INFO 2023-07-26 20:07:00,955 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 801
+INFO 2023-07-26 20:07:23,590 basehttp 7868 13656"GET /about/ HTTP/1.1" 200 1428
+INFO 2023-07-26 20:07:23,681 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 821
+INFO 2023-07-26 20:07:50,334 basehttp 7868 13656"GET /about/ HTTP/1.1" 200 1428
+INFO 2023-07-26 20:07:50,417 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 821
+INFO 2023-07-26 20:08:56,299 basehttp 7868 13656"GET /about/ HTTP/1.1" 200 1448
+INFO 2023-07-26 20:08:56,410 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 827
+INFO 2023-07-26 20:09:12,554 basehttp 7868 13656"GET / HTTP/1.1" 200 731
+INFO 2023-07-26 20:09:12,625 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 304 0
