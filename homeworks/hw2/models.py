@@ -21,7 +21,7 @@ class Product(models.Model):
 
     def __str__(self):
         return f'Product info:\nName: {self.name}\nDescription: {self.description}\nPrice: {self.price}\n' \
-               f'Pieces: {self.quantity}\nCreate date: {self.date_of_order}'
+               f'Pieces: {self.quantity}\nCreate date: {self.date_of_order}\n'
 
 
 class Order(models.Model):
@@ -29,6 +29,8 @@ class Order(models.Model):
     products = models.ManyToManyField(Product)
     total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     date_of_order = models.DateTimeField(auto_now_add=True)
+
+    
 
 
 

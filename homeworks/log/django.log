@@ -550,3 +550,472 @@ INFO 2023-07-26 20:08:56,299 basehttp 7868 13656"GET /about/ HTTP/1.1" 200 1448
 INFO 2023-07-26 20:08:56,410 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 200 827
 INFO 2023-07-26 20:09:12,554 basehttp 7868 13656"GET / HTTP/1.1" 200 731
 INFO 2023-07-26 20:09:12,625 basehttp 7868 13656"GET /static/css/style.css HTTP/1.1" 304 0
+INFO 2023-08-04 20:34:35,673 autoreload 17596 17152Watching for file changes with StatReloader
+INFO 2023-08-04 20:34:45,745 basehttp 17596 17852"GET / HTTP/1.1" 200 731
+INFO 2023-08-04 20:34:46,236 basehttp 17596 17852"GET /static/css/style.css HTTP/1.1" 200 827
+WARNING 2023-08-04 20:34:46,939 log 17596 17852Not Found: /favicon.ico
+WARNING 2023-08-04 20:34:46,939 basehttp 17596 17852"GET /favicon.ico HTTP/1.1" 404 2548
+ERROR 2023-08-04 20:35:30,815 log 17596 17852Internal Server Error: /client/orders/2/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py", line 10, in last_orders
+    date_of_order__gte=datetime.now() - timedelta(months=1))
+TypeError: 'months' is an invalid keyword argument for __new__()
+ERROR 2023-08-04 20:35:30,819 basehttp 17596 17852"GET /client/orders/2/ HTTP/1.1" 500 69303
+INFO 2023-08-04 20:36:25,750 autoreload 17596 17152D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-04 20:36:27,433 autoreload 16544 18408Watching for file changes with StatReloader
+ERROR 2023-08-04 20:36:32,439 log 16544 15896Internal Server Error: /client/orders/2/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py", line 10, in last_orders
+    date_of_order__gte=datetime.now() - timedelta(month=1))
+TypeError: 'month' is an invalid keyword argument for __new__()
+ERROR 2023-08-04 20:36:32,447 basehttp 16544 15896"GET /client/orders/2/ HTTP/1.1" 500 69433
+INFO 2023-08-04 20:38:56,922 autoreload 16544 18408D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-04 20:38:58,658 autoreload 9044 12208Watching for file changes with StatReloader
+INFO 2023-08-04 20:39:03,972 basehttp 9044 11908"GET /client/orders/2/ HTTP/1.1" 200 873
+INFO 2023-08-04 20:40:11,774 autoreload 9044 12208D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-04 20:40:13,103 autoreload 17624 17464Watching for file changes with StatReloader
+INFO 2023-08-04 20:40:15,537 basehttp 17624 17920"GET /client/orders/2/ HTTP/1.1" 200 733
+INFO 2023-08-04 20:40:22,051 autoreload 17624 17464D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-04 20:40:23,474 autoreload 18180 17424Watching for file changes with StatReloader
+INFO 2023-08-04 20:40:26,079 basehttp 18180 17272"GET /client/orders/2/ HTTP/1.1" 200 873
+INFO 2023-08-04 20:44:24,799 autoreload 18180 17424D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\models.py changed, reloading.
+INFO 2023-08-04 20:44:25,949 autoreload 17520 6956Watching for file changes with StatReloader
+ERROR 2023-08-04 20:44:29,279 log 17520 13416Internal Server Error: /client/orders/2/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py", line 19, in last_orders
+    return render(request, 'hw2/show_orders.html', context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\models.py", line 34, in __str__
+    return f'Client: {self.client}\nProduct: {self.product}\n' \
+AttributeError: 'Order' object has no attribute 'product'
+ERROR 2023-08-04 20:44:29,310 basehttp 17520 13416"GET /client/orders/2/ HTTP/1.1" 500 166249
+INFO 2023-08-04 20:46:02,050 autoreload 17520 6956D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\models.py changed, reloading.
+INFO 2023-08-04 20:46:03,165 autoreload 14740 16500Watching for file changes with StatReloader
+ERROR 2023-08-04 20:46:06,305 log 14740 15336Internal Server Error: /client/orders/2/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py", line 19, in last_orders
+    return render(request, 'hw2/show_orders.html', context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\models.py", line 34, in __str__
+    return f'Client: {self.client.name}\nProduct: {self.product}\n' \
+AttributeError: 'Order' object has no attribute 'product'
+ERROR 2023-08-04 20:46:06,326 basehttp 14740 15336"GET /client/orders/2/ HTTP/1.1" 500 166259
+ERROR 2023-08-04 20:46:21,523 log 14740 15336Internal Server Error: /client/orders/2/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py", line 19, in last_orders
+    return render(request, 'hw2/show_orders.html', context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1070, in render
+    return render_value_in_context(output, context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1047, in render_value_in_context
+    value = str(value)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\models.py", line 34, in __str__
+    return f'Client: {self.client.name}\nProduct: {self.product}\n' \
+AttributeError: 'Order' object has no attribute 'product'
+ERROR 2023-08-04 20:46:21,545 basehttp 14740 15336"GET /client/orders/2/ HTTP/1.1" 500 166259
+INFO 2023-08-04 21:44:54,438 autoreload 14740 16500D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\models.py changed, reloading.
+INFO 2023-08-04 21:44:56,392 autoreload 17076 5256Watching for file changes with StatReloader
+INFO 2023-08-04 21:45:05,856 basehttp 17076 18332"GET / HTTP/1.1" 200 731
+INFO 2023-08-04 21:45:17,006 basehttp 17076 18332"GET /client/orders/2/ HTTP/1.1" 200 873
+INFO 2023-08-07 10:26:13,300 autoreload 2792 17500Watching for file changes with StatReloader
+INFO 2023-08-07 10:26:36,659 basehttp 2792 15160"GET / HTTP/1.1" 200 731
+INFO 2023-08-07 10:26:36,910 basehttp 2792 15160"GET /static/css/style.css HTTP/1.1" 304 0
+WARNING 2023-08-07 10:26:41,722 log 2792 15160Not Found: /favicon.ico
+WARNING 2023-08-07 10:26:41,868 basehttp 2792 15160"GET /favicon.ico HTTP/1.1" 404 2548
+INFO 2023-08-07 10:27:02,292 basehttp 2792 15160"GET /client/orders/2/ HTTP/1.1" 200 3049
+INFO 2023-08-07 10:29:23,501 basehttp 2792 18132"GET /client/orders/2/ HTTP/1.1" 200 2677
+ERROR 2023-08-07 10:32:57,248 log 2792 18132Internal Server Error: /client/orders/2/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py", line 19, in last_orders
+    return render(request, 'hw2/show_orders.html', context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'ManyRelatedManager' object is not iterable
+ERROR 2023-08-07 10:32:57,263 basehttp 2792 18132"GET /client/orders/2/ HTTP/1.1" 500 172784
+INFO 2023-08-07 10:45:28,278 autoreload 2792 17500D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 10:45:30,033 autoreload 16048 7672Watching for file changes with StatReloader
+INFO 2023-08-07 10:45:53,774 basehttp 16048 14956"GET /client/orders/2/ HTTP/1.1" 200 869
+INFO 2023-08-07 10:50:06,060 basehttp 16048 14956"GET /client/orders/1/ HTTP/1.1" 200 557
+INFO 2023-08-07 10:50:13,904 basehttp 16048 14956"GET /client/orders/6/ HTTP/1.1" 200 453
+INFO 2023-08-07 10:50:23,628 basehttp 16048 14956"GET /client/orders/3/ HTTP/1.1" 200 661
+INFO 2023-08-07 10:52:46,528 autoreload 16048 7672D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 10:52:47,486 autoreload 6872 6500Watching for file changes with StatReloader
+INFO 2023-08-07 11:02:30,367 autoreload 6872 6500D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:02:31,343 autoreload 18200 5656Watching for file changes with StatReloader
+INFO 2023-08-07 11:10:43,314 autoreload 18200 5656D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:10:44,178 autoreload 18468 12416Watching for file changes with StatReloader
+INFO 2023-08-07 11:11:36,611 autoreload 18468 12416D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\urls.py changed, reloading.
+INFO 2023-08-07 11:11:37,645 autoreload 1884 6296Watching for file changes with StatReloader
+INFO 2023-08-07 11:12:19,673 autoreload 1884 6296D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:12:20,555 autoreload 10120 11120Watching for file changes with StatReloader
+INFO 2023-08-07 11:12:33,446 autoreload 10120 11120D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\urls.py changed, reloading.
+INFO 2023-08-07 11:12:34,379 autoreload 10480 18688Watching for file changes with StatReloader
+INFO 2023-08-07 11:13:02,082 autoreload 10480 18688D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\urls.py changed, reloading.
+INFO 2023-08-07 11:13:03,035 autoreload 3172 9648Watching for file changes with StatReloader
+INFO 2023-08-07 11:13:44,396 autoreload 3172 9648D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\urls.py changed, reloading.
+INFO 2023-08-07 11:13:45,250 autoreload 10236 1832Watching for file changes with StatReloader
+INFO 2023-08-07 11:13:50,383 autoreload 10236 1832D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\urls.py changed, reloading.
+INFO 2023-08-07 11:13:51,265 autoreload 8600 1100Watching for file changes with StatReloader
+INFO 2023-08-07 11:19:09,242 basehttp 8600 11556"GET /client/orders/3/ HTTP/1.1" 200 773
+INFO 2023-08-07 11:19:14,735 basehttp 8600 11556"GET /client/products/6/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:20:13,360 basehttp 8600 11556"GET /client/products/6/ HTTP/1.1" 200 450
+INFO 2023-08-07 11:28:46,095 autoreload 8600 1100D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:28:47,143 autoreload 12936 18092Watching for file changes with StatReloader
+INFO 2023-08-07 11:29:12,009 autoreload 12936 18092D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:29:12,883 autoreload 13668 8360Watching for file changes with StatReloader
+INFO 2023-08-07 11:29:19,045 basehttp 13668 16548"GET /client/products/6/ HTTP/1.1" 200 450
+ERROR 2023-08-07 11:31:07,993 log 13668 16548Internal Server Error: /client/products/6/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py", line 25, in order_info
+    return render(request, 'hw2/products_info.html', {'order': order, 'products': products})
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\template\defaulttags.py", line 839, in do_for
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'for' statements should use the format 'for x in y': for product in {{ products }}
+ERROR 2023-08-07 11:31:08,009 basehttp 13668 16548"GET /client/products/6/ HTTP/1.1" 500 167842
+INFO 2023-08-07 11:32:53,841 basehttp 13668 16548"GET /client/products/6/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:33:48,466 basehttp 13668 16548"GET /client/products/6/ HTTP/1.1" 200 442
+INFO 2023-08-07 11:35:45,417 autoreload 13668 8360D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:35:46,373 autoreload 9604 804Watching for file changes with StatReloader
+INFO 2023-08-07 11:35:52,024 basehttp 9604 2332"GET /client/products/6/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:36:29,729 autoreload 9604 804D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:36:31,098 autoreload 1428 13192Watching for file changes with StatReloader
+INFO 2023-08-07 11:36:34,035 basehttp 1428 10584"GET /client/products/6/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:36:48,750 basehttp 1428 10584"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:37:39,964 autoreload 1428 13192D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:37:40,926 autoreload 16088 4104Watching for file changes with StatReloader
+INFO 2023-08-07 11:39:28,564 autoreload 16088 4104D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:39:30,572 autoreload 16472 1100Watching for file changes with StatReloader
+INFO 2023-08-07 11:39:31,497 basehttp 16472 4852"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:40:16,627 autoreload 16472 1100D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:40:17,501 autoreload 14164 4060Watching for file changes with StatReloader
+INFO 2023-08-07 11:40:22,261 basehttp 14164 11700"GET /client/products/9/ HTTP/1.1" 200 482
+INFO 2023-08-07 11:43:24,636 autoreload 14164 4060D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:43:25,584 autoreload 7160 13928Watching for file changes with StatReloader
+INFO 2023-08-07 11:43:29,125 basehttp 7160 15740"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:45:21,322 autoreload 7160 13928D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:45:22,174 autoreload 10268 16980Watching for file changes with StatReloader
+INFO 2023-08-07 11:45:26,674 basehttp 10268 15256"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:47:01,275 autoreload 10268 16980D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:47:02,176 autoreload 13468 18424Watching for file changes with StatReloader
+INFO 2023-08-07 11:47:14,846 autoreload 13468 18424D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:47:15,815 autoreload 5420 18640Watching for file changes with StatReloader
+ERROR 2023-08-07 11:47:24,599 log 5420 14304Internal Server Error: /client/products/9/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py", line 26, in order_info
+    info.join(product).join('\n')
+TypeError: can only join an iterable
+ERROR 2023-08-07 11:47:24,603 basehttp 5420 14304"GET /client/products/9/ HTTP/1.1" 500 69661
+INFO 2023-08-07 11:48:42,095 autoreload 5420 18640D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:48:43,117 autoreload 13892 4964Watching for file changes with StatReloader
+INFO 2023-08-07 11:48:46,232 basehttp 13892 9000"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:49:39,781 autoreload 13892 4964D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:49:41,005 autoreload 11204 14144Watching for file changes with StatReloader
+INFO 2023-08-07 11:49:41,769 basehttp 11204 6192"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:50:31,347 autoreload 11204 14144D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:50:32,186 autoreload 16472 8600Watching for file changes with StatReloader
+INFO 2023-08-07 11:50:35,133 basehttp 16472 12096"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:52:11,052 autoreload 16472 8600D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:52:12,116 autoreload 10932 13404Watching for file changes with StatReloader
+INFO 2023-08-07 11:52:17,861 basehttp 10932 4112"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:53:56,522 autoreload 10932 13404D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:53:57,358 autoreload 14952 8300Watching for file changes with StatReloader
+INFO 2023-08-07 11:54:00,158 basehttp 14952 11756"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:54:50,225 basehttp 14952 11756"GET /client/products/6/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:55:45,417 autoreload 14952 8300D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:55:46,393 autoreload 12840 13000Watching for file changes with StatReloader
+INFO 2023-08-07 11:55:49,188 basehttp 12840 14056"GET /client/orders/3/ HTTP/1.1" 200 773
+INFO 2023-08-07 11:55:59,123 basehttp 12840 14056"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:56:26,781 autoreload 12840 13000D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:56:27,695 autoreload 10956 8104Watching for file changes with StatReloader
+INFO 2023-08-07 11:56:29,976 basehttp 10956 16228"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 11:56:50,880 autoreload 10956 8104D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:56:51,843 autoreload 516 16212Watching for file changes with StatReloader
+INFO 2023-08-07 11:56:53,679 basehttp 516 15128"GET /client/products/9/ HTTP/1.1" 200 13118
+INFO 2023-08-07 11:57:46,527 basehttp 516 15128"GET /client/products/9/ HTTP/1.1" 200 801
+INFO 2023-08-07 11:59:49,309 autoreload 516 16212D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 11:59:50,390 autoreload 16840 17568Watching for file changes with StatReloader
+INFO 2023-08-07 12:00:53,606 autoreload 16840 17568D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\models.py changed, reloading.
+INFO 2023-08-07 12:00:54,452 autoreload 15352 14616Watching for file changes with StatReloader
+INFO 2023-08-07 12:01:59,735 autoreload 15352 14616D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 12:02:00,769 autoreload 9604 15420Watching for file changes with StatReloader
+INFO 2023-08-07 12:02:13,375 basehttp 9604 16312"GET /client/products/9/ HTTP/1.1" 200 311
+INFO 2023-08-07 12:02:33,681 autoreload 9604 15420D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 12:02:34,728 autoreload 14784 14828Watching for file changes with StatReloader
+INFO 2023-08-07 12:02:41,557 basehttp 14784 14892"GET /client/products/9/ HTTP/1.1" 200 311
+INFO 2023-08-07 12:03:11,929 autoreload 14784 14828D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 12:03:12,906 autoreload 13236 15588Watching for file changes with StatReloader
+INFO 2023-08-07 12:03:15,976 basehttp 13236 432"GET /client/products/9/ HTTP/1.1" 200 881
+INFO 2023-08-07 12:03:42,374 basehttp 13236 432"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 12:04:16,936 basehttp 13236 432"GET /client/products/9/ HTTP/1.1" 200 349
+INFO 2023-08-07 12:05:39,558 autoreload 10268 300Watching for file changes with StatReloader
+INFO 2023-08-07 12:05:42,408 basehttp 10268 6872"GET / HTTP/1.1" 200 731
+INFO 2023-08-07 12:05:51,594 basehttp 10268 6872"GET /client/orders/2/ HTTP/1.1" 200 913
+INFO 2023-08-07 12:06:40,793 basehttp 10268 6872"GET /client/products/4/ HTTP/1.1" 200 313
+INFO 2023-08-07 12:07:04,177 basehttp 10268 6872"GET /client/orders/2/ HTTP/1.1" 200 913
+INFO 2023-08-07 12:07:43,711 autoreload 10268 300D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py changed, reloading.
+INFO 2023-08-07 12:07:44,641 autoreload 1444 9000Watching for file changes with StatReloader
+INFO 2023-08-07 12:07:53,110 basehttp 1444 19108"GET /client/orders/2/ HTTP/1.1" 200 913
+INFO 2023-08-07 12:08:35,082 basehttp 1444 19108"GET /client/products/4/ HTTP/1.1" 200 326
+INFO 2023-08-07 12:09:09,413 autoreload 6508 9936Watching for file changes with StatReloader
+INFO 2023-08-07 12:09:13,827 basehttp 6508 15584"GET / HTTP/1.1" 200 731
+INFO 2023-08-07 12:09:29,016 basehttp 6508 15584"GET /client/orders/1/ HTTP/1.1" 200 523
+INFO 2023-08-07 12:11:50,459 autoreload 7988 18824Watching for file changes with StatReloader
+INFO 2023-08-07 12:11:53,922 basehttp 7988 13648"GET / HTTP/1.1" 200 731
+INFO 2023-08-07 12:12:08,916 basehttp 7988 13648"GET /client/orders/2/ HTTP/1.1" 200 913
+INFO 2023-08-07 12:13:59,279 basehttp 7988 13648"GET /client/products/4/ HTTP/1.1" 200 326
+INFO 2023-08-07 12:15:02,000 basehttp 7988 13648"GET /client/orders/3/ HTTP/1.1" 200 773
+INFO 2023-08-07 12:15:17,247 basehttp 7988 13648"GET /client/products/9/ HTTP/1.1" 200 430
+INFO 2023-08-07 12:15:43,200 basehttp 7988 13648"GET /client/products/9/ HTTP/1.1" 200 462
+INFO 2023-08-07 12:27:15,701 basehttp 7988 8756"GET /client/products/9/ HTTP/1.1" 200 894
+INFO 2023-08-07 12:28:09,651 basehttp 7988 8756"GET /client/products/9/ HTTP/1.1" 200 894
+INFO 2023-08-07 12:29:03,044 basehttp 7988 8756"GET /client/orders/3/ HTTP/1.1" 200 813
+INFO 2023-08-07 12:29:17,473 basehttp 7988 8756"GET /client/orders/1/ HTTP/1.1" 200 633
+INFO 2023-08-07 12:29:23,920 basehttp 7988 8756"GET /client/products/1/ HTTP/1.1" 200 468
+INFO 2023-08-07 12:29:48,229 basehttp 7988 8756"GET /client/orders/1/ HTTP/1.1" 200 633
+INFO 2023-08-07 12:29:56,262 basehttp 7988 8756"GET /client/orders/2/ HTTP/1.1" 200 1173
+INFO 2023-08-07 12:30:08,472 basehttp 7988 8756"GET /client/orders/3/ HTTP/1.1" 200 813
+INFO 2023-08-07 12:34:34,815 autoreload 14892 3500Watching for file changes with StatReloader
+INFO 2023-08-07 12:34:38,689 basehttp 14892 10380"GET / HTTP/1.1" 200 731
+INFO 2023-08-07 12:34:52,316 basehttp 14892 10380"GET /client/orders/2/ HTTP/1.1" 200 1173
+INFO 2023-08-07 12:37:04,914 autoreload 18784 708Watching for file changes with StatReloader
+INFO 2023-08-07 12:37:08,470 basehttp 18784 4512"GET /client/orders/2/ HTTP/1.1" 200 1533
+INFO 2023-08-07 12:37:19,104 basehttp 18784 4512"GET /client/products/2/ HTTP/1.1" 200 326
+INFO 2023-08-07 12:37:34,351 basehttp 18784 4512"GET /client/products/3/ HTTP/1.1" 200 326
+INFO 2023-08-07 12:37:41,245 basehttp 18784 4512"GET /client/products/4/ HTTP/1.1" 200 326
+INFO 2023-08-07 12:38:07,769 basehttp 18784 4512"GET /client/products/5/ HTTP/1.1" 200 894
+INFO 2023-08-07 12:38:30,042 basehttp 18784 4512"GET /client/products/4/ HTTP/1.1" 200 326
+INFO 2023-08-07 12:38:34,071 basehttp 18784 4512"GET /client/products/5/ HTTP/1.1" 200 894
+INFO 2023-08-07 12:38:39,384 basehttp 18784 4512"GET /client/products/3/ HTTP/1.1" 200 326
+INFO 2023-08-07 12:38:43,403 basehttp 18784 4512"GET /client/products/4/ HTTP/1.1" 200 326
+INFO 2023-08-07 12:38:46,697 basehttp 18784 4512"GET /client/products/5/ HTTP/1.1" 200 894
+INFO 2023-08-07 12:39:06,254 basehttp 18784 4512"GET /client/orders/3/ HTTP/1.1" 200 993
+INFO 2023-08-07 12:39:11,303 basehttp 18784 4512"GET /client/products/6/ HTTP/1.1" 200 894
+INFO 2023-08-07 12:39:16,762 basehttp 18784 4512"GET /client/products/9/ HTTP/1.1" 200 894
+INFO 2023-08-07 12:39:28,278 basehttp 18784 4512"GET /client/products/9/ HTTP/1.1" 200 894
+INFO 2023-08-07 12:39:39,368 basehttp 18784 4512"GET /client/orders/1/ HTTP/1.1" 200 723
+INFO 2023-08-07 12:39:42,234 basehttp 18784 4512"GET /client/products/1/ HTTP/1.1" 200 468
