@@ -1019,3 +1019,68 @@ INFO 2023-08-07 12:39:16,762 basehttp 18784 4512"GET /client/products/9/ HTTP/1.
 INFO 2023-08-07 12:39:28,278 basehttp 18784 4512"GET /client/products/9/ HTTP/1.1" 200 894
 INFO 2023-08-07 12:39:39,368 basehttp 18784 4512"GET /client/orders/1/ HTTP/1.1" 200 723
 INFO 2023-08-07 12:39:42,234 basehttp 18784 4512"GET /client/products/1/ HTTP/1.1" 200 468
+INFO 2023-08-08 13:38:27,774 autoreload 11412 12416Watching for file changes with StatReloader
+INFO 2023-08-08 13:38:48,102 autoreload 12376 13684Watching for file changes with StatReloader
+INFO 2023-08-08 13:39:29,157 autoreload 15144 18288Watching for file changes with StatReloader
+INFO 2023-08-08 14:53:04,071 autoreload 12236 952Watching for file changes with StatReloader
+INFO 2023-08-08 14:53:09,539 basehttp 12236 13844"GET / HTTP/1.1" 200 731
+INFO 2023-08-08 14:53:09,900 basehttp 12236 13844"GET /static/css/style.css HTTP/1.1" 200 827
+WARNING 2023-08-08 14:53:25,643 log 12236 13844Not Found: /add_product/
+WARNING 2023-08-08 14:53:25,644 basehttp 12236 13844"GET /add_product/ HTTP/1.1" 404 2551
+INFO 2023-08-08 14:54:21,272 basehttp 12236 13844"GET /client/add_product/ HTTP/1.1" 200 1311
+INFO 2023-08-08 14:54:37,829 basehttp 12236 13844"GET /client/add_product/ HTTP/1.1" 200 1302
+INFO 2023-08-08 14:56:13,369 views 12236 15132Got: name='Pillow' description='Some Pillow' price=100.0 quantity=2
+ERROR 2023-08-08 14:56:13,897 log 12236 15132Internal Server Error: /client/add_product/
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: table hw2_product has no column named image
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\homeworks\hw2\views.py", line 52, in add_product
+    product.save()
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\models\base.py", line 814, in save
+    self.save_base(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\models\base.py", line 877, in save_base
+    updated = self._save_table(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\models\base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\models\base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\models\query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\Programming\JANGO\Homeworks\HW1\venv\lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: table hw2_product has no column named image
+ERROR 2023-08-08 14:56:13,914 basehttp 12236 15132"POST /client/add_product/ HTTP/1.1" 500 154104
+INFO 2023-08-08 14:57:54,814 autoreload 3668 14292Watching for file changes with StatReloader
+INFO 2023-08-08 15:00:30,845 autoreload 13372 11284Watching for file changes with StatReloader
+INFO 2023-08-08 15:02:32,749 autoreload 1864 2792Watching for file changes with StatReloader
+INFO 2023-08-08 15:02:43,163 basehttp 1864 2784"GET / HTTP/1.1" 200 731
+INFO 2023-08-08 15:03:01,758 basehttp 1864 2784"GET /client/add_product/ HTTP/1.1" 200 1302
+INFO 2023-08-08 15:03:30,044 views 1864 2784Got: name='Pillow' description='Some pillow' price=100.0 quantity=3
+INFO 2023-08-08 15:03:30,074 basehttp 1864 2784"POST /client/add_product/ HTTP/1.1" 200 1337
